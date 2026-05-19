@@ -448,16 +448,99 @@
   }
 
   /* === RESPONSIVE === */
-  @media (max-width: 600px) {
-    .article-header { padding: 48px 20px 32px; }
-    .article-body { padding: 36px 20px 60px; }
-    h1 { font-size: 32px; }
-    .pullquote { font-size: 21px; margin-left: 0; }
-    pre { padding: 18px 16px; font-size: 13px; }
-    .architecture-box { padding: 24px 16px; }
+
+  /* Tablet */
+  @media (max-width: 860px) {
+    .article-header { max-width: 100%; padding: 60px 32px 36px; }
+    .article-body { max-width: 100%; padding: 40px 32px 64px; }
+    .article-footer { max-width: 100%; padding: 36px 32px 64px; }
+    .pullquote { margin-left: 0; font-size: 23px; }
     .dual-story { grid-template-columns: 1fr; }
-    .status-grid { grid-template-columns: 1fr; }
+    .arch-node { min-width: 220px; }
+  }
+
+  /* Mobile */
+  @media (max-width: 600px) {
+    body { font-size: 17px; }
+
+    .article-header { padding: 40px 18px 28px; }
+    .article-body { padding: 28px 18px 52px; }
+    .article-footer { padding: 28px 18px 52px; }
+
+    h1 { font-size: 28px; letter-spacing: -0.2px; }
+
+    .subtitle { font-size: 18px; }
+
+    .article-meta {
+      font-size: 11px;
+      letter-spacing: 2px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .author-block {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
     .read-time { display: none; }
+
+    .article-body h2 { font-size: 24px; margin: 40px 0 16px; }
+    .article-body h3 { font-size: 19px; margin: 28px 0 10px; }
+
+    .drop-cap::first-letter {
+      font-size: 60px;
+      margin: 4px 8px 0 -2px;
+    }
+
+    .pullquote {
+      font-size: 19px;
+      margin: 32px 0;
+      padding: 10px 0 10px 20px;
+    }
+
+    pre {
+      padding: 16px 14px;
+      font-size: 12.5px;
+      border-radius: 6px;
+      word-break: break-all;
+      white-space: pre-wrap;
+    }
+
+    .dual-story { grid-template-columns: 1fr; gap: 14px; }
+    .story-card { padding: 20px 16px; }
+
+    .status-grid { grid-template-columns: 1fr; gap: 8px; }
+    .status-item { font-size: 12px; padding: 12px 14px; }
+
+    .architecture-box { padding: 20px 14px; }
+    .arch-flow { gap: 4px; }
+    .arch-node {
+      min-width: 0;
+      width: 100%;
+      font-size: 13px;
+      padding: 9px 14px;
+    }
+    .arch-arrow { font-size: 16px; }
+
+    .callout { padding: 20px 18px; }
+    .callout p { font-size: 15.5px; }
+
+    .live-badge { font-size: 11px; padding: 6px 14px; }
+
+    .footer-tags { gap: 6px; }
+    .tag { font-size: 10px; padding: 5px 10px; }
+    .footer-note { font-size: 14px; }
+
+    .divider { margin: 36px 0; font-size: 18px; letter-spacing: 8px; }
+  }
+
+  /* Very small screens */
+  @media (max-width: 380px) {
+    h1 { font-size: 24px; }
+    .article-header { padding: 32px 14px 24px; }
+    .article-body { padding: 24px 14px 44px; }
+    .article-footer { padding: 24px 14px 44px; }
+    pre { font-size: 11.5px; }
   }
 
   @media print {
